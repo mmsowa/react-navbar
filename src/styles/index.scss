@@ -1,0 +1,96 @@
+@import "./_colors.scss";
+@import "./_variables.scss";
+@import "./dropdown.scss";
+
+body {
+  margin: 0;
+  background-color: #353b45;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+}
+
+a {
+  color: $text-color;
+  text-decoration: none;
+}
+
+.content {
+  max-width: 120vh;
+  margin: auto;
+  padding: 0 25px;
+}
+
+.navbar {
+  height: $nav-size;
+  background-color: $bg;
+  padding: 0 1rem;
+}
+
+.navbar-nav {
+  max-width: 120vh;
+  margin: auto;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-item {
+  width: calc(#{$nav-size} * 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $button-size;
+
+  .icon-button {
+    width: $button-size;
+    height: $button-size;
+    background-color: $bg-accent;
+    border-radius: 50%;
+    padding: 5px;
+    margin: 2px;
+    display: flex;
+    transition: filter 300ms;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      filter: brightness(1.2);
+    }
+  }
+
+  &.searchbar {
+    height: $button-size;
+    width: calc(#{$nav-size} * 2);
+    padding: 5px;
+    padding-left: 15px;
+    margin-right: auto;
+    background-color: white;
+    border-radius: 1vh;
+    outline: none;
+    border: none;
+  }
+
+  &.brandicon {
+    height: $button-size;
+    width: $button-size;
+    padding: 6px;
+    margin-right: 20px;
+    border-radius: 1vh;
+    background-color: $color2;
+    border: 2px darken($color1, 15%) solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+  }
+}
